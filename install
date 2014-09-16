@@ -22,20 +22,20 @@ function pause() {
 }
 _success() {
 	echo "$(date) SUCCESS:  $@" >> "$LOG"
-	printf "$(tput setaf 2)✓ Success:$(tput sgr0) %s\n" "$@"
+	printf "%s✓ Success:%s \n" "$(tput setaf 2)" "$(tput sgr0) $@"
 }
 _warning() {
 	echo "$(date) WARNING:  $@" >> "$LOG"
-	printf "$(tput setaf 3)⚠ Warning:$(tput sgr0) %s!\n" "$@"
+	printf "%s⚠ Warning:%s! \n" "$(tput setaf 3)" "$(tput sgr0) $@"
 }
 _error() {
 	echo "$(date) ERROR:  $@" >> "$LOG"
-	printf "$(tput setaf 1)⊘ Error:$(tput sgr0) %s. Aborting!\n" "$@"
+	printf "%s⊘ Error:%s. Aborting!\n" "$(tput setaf 1)" "$(tput sgr0) $@"
 	exit 1
 }
 _process() {
 	echo "$(date) PROCESSING:  $@" >> "$LOG"
-	printf "$(tput setaf 6)┃$(tput sgr0)$(tput setaf 7) %s...$(tput sgr0)\n" "$@"
+	printf "%s┃%s... \n" "$(tput setaf 6)" "$(tput sgr0) $@"
 }
 _require_prog() {
 	local prog=$1
@@ -51,7 +51,7 @@ _require_prog() {
 download_repo() {
 	_warning "No $DIR found"
 
-	_process "Creating directory at $DIR and setting permissions"
+	_process "Creating directory at $DIR"
 	mkdir -p "$DIR"
 
 	_process "Downloading repository to /tmp directory"
