@@ -17,6 +17,9 @@ _is_app_installed() {
 	fi
 	return 1
 }
+function pause() {
+	read -p "$*"
+}
 _success() {
 	echo "$(date) SUCCESS:  $@" >> "$LOG"
 	printf "$(tput setaf 2)✓ Success:$(tput sgr0) %s\n" "$@"
@@ -109,15 +112,14 @@ install_workflows() {
 	local dirs="$DIR/*"
 	local dir
 
-	set -x
 	for dir in $dirs
 	do
 		file="$(basename "$dir")"
 		_is_dir "$dir" \
-			_process "Installing ${file}.alfredworkflow" \
-			&& open "$dir/${file}.alfredworkflow"
+			&& _process "Installing ${file}.alfredworkflow" \
+			&& open "$dir/${file}.alfredworkflow" \
+			&& pause "Press [Enter] key to continue..."
 	done
-	set +x
 
 	[[ $? ]] && _success "All workflows installed"
 }
