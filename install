@@ -1,0 +1,137 @@
+#!/usr/bin/env bash
+
+# variables
+readonly GITHUB_USER="chrisopedia"
+readonly REPO="alfred-workflows"
+readonly LOG="$HOME/Library/Logs/${REPO}.log"
+readonly DIR="/usr/local/opt/$REPO"
+
+_is_dir() {
+	local file=$1
+	[[ -d $file ]]
+}
+_is_app_installed() {
+	local app=$1
+	if find "/Applications" "$HOME/Applications" -name "*$app*" &> /dev/null; then
+		return 0
+	fi
+	return 1
+}
+_success() {
+	echo "$(date) SUCCESS:  $@" >> "$LOG"
+	printf "$(tput setaf 2)✓ Success:$(tput sgr0) %s\n" "$@"
+}
+_warning() {
+	echo "$(date) WARNING:  $@" >> "$LOG"
+	printf "$(tput setaf 3)⚠ Warning:$(tput sgr0) %s!\n" "$@"
+}
+_error() {
+	echo "$(date) ERROR:  $@" >> "$LOG"
+	printf "$(tput setaf 1)⊘ Error:$(tput sgr0) %s. Aborting!\n" "$@"
+	exit 1
+}
+_process() {
+	echo "$(date) PROCESSING:  $@" >> "$LOG"
+	printf "$(tput setaf 6)┃$(tput sgr0)$(tput setaf 7) %s...$(tput sgr0)\n" "$@"
+}
+_require_prog() {
+	local prog=$1
+	local msg=$2
+	local url=$3
+	type -P "$prog" >/dev/null || {
+		_error "$msg"
+		echo "Download it at $url"
+		exit 2
+	}
+}
+
+download_repo() {
+	_warning "No $DIR found"
+
+	_process "Creating directory at $DIR and setting permissions"
+	mkdir -p "$DIR"
+
+	_process "Downloading repository to /tmp directory"
+	# (-#) shows the progress bar as # sign
+	# (-f) fail silently
+	# (-L) follow the headers
+	# (-o) output to a file
+	curl -#fLo "/tmp/${REPO}.tar.gz" "https://github.com/$GITHUB_USER/$REPO/tarball/master"
+
+	_process "Extracting files to $DIR"
+	tar -zxf "/tmp/${REPO}.tar.gz" --strip-components 1 -C "$DIR"
+
+	_process "Removing tarball from /tmp directory"
+	rm -rf "/tmp/${REPO}.tar.gz"
+
+	[[ $? ]] && _success "$DIR created, repository downloaded and extracted"
+}
+
+setup_git_repo() {
+	_process "Changing to $DIR"
+	cd "$DIR"
+
+	# Initialize the git repository if it's missing
+	_process "Initializing git repository"
+	git init
+
+	_process "Adding https://github.com/$GITHUB_USER/${REPO}.git as origin"
+	git remote add origin "https://github.com/$GITHUB_USER/${REPO}.git"
+
+	_process "Downloading changes from origin"
+	git fetch origin master
+
+	# Reset the index and working tree to the fetched HEAD
+	# (submodules are cloned in the subsequent sync step)
+	_process "Resetting index & working tree to fetched HEAD"
+	git reset --hard FETCH_HEAD
+
+	# Remove any untracked files
+	_process "Removing any untracked files"
+	git clean -fd
+
+	[[ $? ]] && _success "Repository has been initialized"
+}
+
+pull_down_changes() {
+	# Pull down the latest changes
+	_process "Pulling down latest changes"
+	git pull --rebase origin master
+
+	# Update submodules
+	_process "Updating submodules"
+	git submodule update --recursive --init --quiet
+
+	[[ $? ]] && _success "Repository has been updated"
+}
+
+install_workflows() {
+	local dirs="$DIR/$REPO/*"
+	local dir
+
+	for dir in $dirs
+	do
+		file="$(basename "$dir")"
+		_is_dir "$dir" \
+			_process "Installing ${file}.alfredworkflow" \
+			&& open "$dir/${file}.alfredworkflow"
+	done
+
+	[[ $? ]] && _success "All workflows installed"
+}
+
+main() {
+	_require_prog curl "curl is required to download the repository" http://curl.haxx.se \
+		&& download_repo
+
+	_require_prog git "git is required to setup the library" http://git-scm.com \
+		&& setup_git_repo \
+		&& pull_down_changes
+
+	_is_app_installed "Alfred 2" \
+		&& install_workflows
+
+	[[ $? ]] && _success "$REPO installed"
+}
+
+main
