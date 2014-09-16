@@ -8,6 +8,12 @@ A collection of [Alfred 2](http://www.alfredapp.com/) workflows that will rock y
 
 Download and open file using [Alfred 2](http://www.alfredapp.com/).
 
+### One-line Installation
+
+```bash
+$ bash -c "$(curl -#fL raw.github.com/chrisopedia/alfred-workflows/go/install)"
+```
+
 P.S.: You need to [buy the Powerpack](https://buy.alfredapp.com/) to use these workflows.
 
 ## Workflows
