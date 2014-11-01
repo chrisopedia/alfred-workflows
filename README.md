@@ -18,34 +18,7 @@ P.S.: You need to [buy the Powerpack](https://buy.alfredapp.com/) to use these w
 
 ## Workflows
 
-:arrow_down: **&nbsp;[Download them all](https://github.com/zenorocha/alfred-workflows/releases).**
-
-### [Sublime Text](https://github.com/franzheidl/alfred-workflows/tree/master/open-with-sublime-text) (v1.1) ~ [Download](http://zno.io/RcAe)
-
-Open files or a folders in [Sublime Text 3](http://www.sublimetext.com/3) ~ *by [@franzheidl](https://github.com/franzheidl/).*
-
-> Triggers: `subl`, `subl*`.
-
-![Sublime Workflow](https://cloud.githubusercontent.com/assets/398893/3528729/6d152f88-0792-11e4-9dbe-2c4374f2e092.png)
-
-### [Terminal → Finder](https://github.com/LeEnno/alfred-terminalfinder) (v1.6) ~ [Download](http://zno.io/RkU2)
-
-Open current Finder window in Terminal/iTerm and vice versa ~ *by [@LeEnno](https://github.com/LeEnno/).*
-
-> Triggers: `ft`, `tf`, `fi`, `if`.
-
-![Terminal → Finder](https://cloud.githubusercontent.com/assets/398893/3528744/7f119730-0792-11e4-9450-c30a1ac229be.png)
-![Terminal → Finder](https://cloud.githubusercontent.com/assets/398893/3528751/912d8be0-0792-11e4-86f8-aa1e62ddece7.png)
-
-### [Package Managers](https://github.com/willfarrell/alfred-pkgman-workflow) (v1.30) ~ [Download](http://zno.io/RcdI)
-
-Quick package/plugin/component lookup for your favorite package managers ~ *by [@willfarrell](https://github.com/willfarrell/).*
-
-> Triggers: `bower`, `grunt`, `gulp`, `npm`, `composer`, `pear`, `gems`, `pypi`, `alcatraz`, `cocoa`, `brew`, `rpm`, `maven`, `docker`.
-
-![Bower Workflow](https://cloud.githubusercontent.com/assets/398893/3528800/f6bccd0e-0792-11e4-87b4-fb2ac4065720.png)
-![Grunt Workflow](https://cloud.githubusercontent.com/assets/398893/3528808/04fd2b20-0793-11e4-937b-132d9d0367ed.png)
-![NPM Workflow](https://cloud.githubusercontent.com/assets/398893/3528813/12046068-0793-11e4-8602-3be496c6018c.png)
+:arrow_down: **&nbsp;[Download them all](https://github.com/chrisopedia/alfred-workflows/releases).**
 
 ### [Can I Use](https://github.com/willfarrell/alfred-caniuse-workflow) (1.3) ~ [Download](http://zno.io/Rcex)
 
@@ -99,18 +72,6 @@ Transform query strings through base64, html, url, and utf-8 encode/decode ~ *by
 
 ![Encode/Decode Workflow](https://cloud.githubusercontent.com/assets/398893/3528892/c74e0118-0793-11e4-82b6-45a9bbd87afb.png)
 
-### [FileZilla](https://github.com/jeffmagill/alfred-open-in-filezilla) (v1.0) ~ [Download](http://zno.io/RnTx)
-
-Open up [FileZilla](https://filezilla-project.org/) and connect to a site ~ *by [@jeffmagill](https://github.com/jeffmagill/).*
-
-P.S.: FileZilla is a free external application, make sure to [download](https://filezilla-project.org/) it before start using this workflow.
-
-> Triggers: `fz`.
-
-![FileZilla Workflow](https://cloud.githubusercontent.com/assets/398893/3528897/d4e9d784-0793-11e4-9e64-b2c580527f6e.png)
-
-Looking for another FTP client? See [Extra wiki](https://github.com/zenorocha/alfred-workflows/wiki/Extras#ftp).
-
 ### [GitHub](https://github.com/gharlan/alfred-github-workflow) (1.0) ~ [Download](http://zno.io/RcPe)
 
 Easily open [GitHub](http://github.com) repositories and more in the browser ~ *by [@gharlan](https://github.com/gharlan/).*
@@ -123,17 +84,22 @@ P.S.: You have to login before you can use the workflow: `gh > login <user>`.
 ![GH @User Workflow](https://cloud.githubusercontent.com/assets/398893/3528907/ecd0feb8-0793-11e4-8c41-022c5b94616a.png)
 ![GH My Workflow](https://cloud.githubusercontent.com/assets/398893/3528905/ecb7c0e2-0793-11e4-8436-63247eb93fab.png)
 
-### [Source Tree](https://github.com/zhaocai/alfred2-sourcetree-workflow) (v1.2) ~ [Download](http://zno.io/Ro6V)
+### [iBooks Store](http://www.alfredforum.com/topic/4704-ibooks-store-search/) ~ [Download](https://github.com/packal/repository/raw/master/com.targumanu.ibookssearch/ibooks_store_search.alfredworkflow)
 
-List, search, and open Git repositories in [Source Tree](http://www.sourcetreeapp.com/) ~ *by [@zhaocai](https://github.com/zhaocai/).*
+Search the iBook Store ~ *by [@targumanu](https://github.com/targumanu).*
 
-P.S.: Source Tree is a free external application, make sure to [download](http://www.sourcetreeapp.com/) it before start using this workflow.
+> Triggers: `ib`, `ibprefs`.
 
-> Triggers: `st`, `stbookmark`.
+![iBooks Search Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/iBooks%20Search%20Screen%201.png)
+![iBooks Preferences Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/iBooks%20Search%20Screen%202.png)
 
-![Source Tree Workflow](https://cloud.githubusercontent.com/assets/398893/3528921/0b7585e6-0794-11e4-9fa7-b710a237b0ca.png)
+### [iCloud Tabs](http://www.alfredforum.com/topic/4523-icloud-tabs-with-search/) ~ [Download](https://github.com/packal/repository/raw/master/com.targumanu.icloudtabs/icloud_tabs.alfredworkflow)
 
-Looking for another Git client? See [Extra wiki](https://github.com/zenorocha/alfred-workflows/wiki/Extras#git-client).
+View and open iCloud tabs from all devices ~ *by [@targumanu](https://github.com/targumanu).*
+
+> Triggers: `itabs`.
+
+![iCloud Tabs Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/iCloud%20Tabs.png)
 
 ### [iOS Simulator](http://www.alfredforum.com/topic/2126-launch-ios-simulator/) (1.0) ~ [Download](http://zno.io/RcI1)
 
@@ -151,6 +117,15 @@ Shows your internal and external IP address ~ *by [@dferg](http://dferg.us/ip-ad
 
 ![IP Address Workflow](https://cloud.githubusercontent.com/assets/398893/3528930/2a1f6d90-0794-11e4-95d9-494b27070e2a.png)
 
+### [iTunes Store](http://www.alfredforum.com/topic/4705-itunes-store-search/) ~ [Download](https://github.com/packal/repository/raw/master/com.targumanu.itunessearch/itunes_store_search.alfredworkflow)
+
+Search the iTunes Store ~ *by [@targumanu](https://github.com/targumanu).*
+
+> Triggers: `it`, `itprefs`.
+
+![iTunes Search Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/iTunes%20Search%20Screen%201.png)
+![iTunes Preferences Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/iTunes%20Search%20Screen%203.png)
+
 ### [Kill Process](https://github.com/nathangreenstein/alfred-process-killer) (1.2) ~ [Download](http://zno.io/RcNL)
 
 Easily find processes by name and kill them ~ *by [@nathangreenstein](https://github.com/nathangreenstein/).*
@@ -159,6 +134,51 @@ Easily find processes by name and kill them ~ *by [@nathangreenstein](https://gi
 
 ![Kill Process Workflow](https://cloud.githubusercontent.com/assets/398893/3528937/3621c71e-0794-11e4-9fef-59e5674da49e.png)
 
+### [Mac App Store](http://www.alfredforum.com/topic/4706-mac-app-store-search/) ~ [Download](https://github.com/packal/repository/raw/master/com.targumanu.massearch/mac_app_store_search.alfredworkflow)
+
+Search the Mac App Store ~ *by [@targumanu](https://github.com/targumanu).*
+
+> Triggers: `mas`, `masprefs`.
+
+![Mac App Store Search Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/MAS%20Search%20Screen%201.png)
+![Macc App Store Preferences Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/MAS%20Search%20Screen%202.png)
+
+### [Package Managers](https://github.com/willfarrell/alfred-pkgman-workflow) (v1.30) ~ [Download](http://zno.io/RcdI)
+
+Quick package/plugin/component lookup for your favorite package managers ~ *by [@willfarrell](https://github.com/willfarrell/).*
+
+> Triggers: `bower`, `grunt`, `gulp`, `npm`, `composer`, `pear`, `gems`, `pypi`, `alcatraz`, `cocoa`, `brew`, `rpm`, `maven`, `docker`.
+
+![Bower Workflow](https://cloud.githubusercontent.com/assets/398893/3528800/f6bccd0e-0792-11e4-87b4-fb2ac4065720.png)
+![Grunt Workflow](https://cloud.githubusercontent.com/assets/398893/3528808/04fd2b20-0793-11e4-937b-132d9d0367ed.png)
+![NPM Workflow](https://cloud.githubusercontent.com/assets/398893/3528813/12046068-0793-11e4-8602-3be496c6018c.png)
+
+### [Safari Reading List](http://www.alfredforum.com/topic/4524-safari-reading-list/) (v1.4) ~ [Download](https://github.com/packal/repository/raw/master/com.targumanu.readinglist/reading_list.alfredworkflow)
+
+Search, open and add Safari reading list items ~ *by [@targumanu](https://github.com/targumanu).*
+
+> Triggers: `rl`.
+
+![Reading List Workflow](https://dl.dropboxusercontent.com/u/209851/Alfred/Reading%20List.png)
+
+### [Safari Chrome Tabs](http://www.alfredforum.com/topic/236-search-safari-and-chrome-tabs-updated-feb-8-2014/) ~ [Download](https://github.com/packal/repository/raw/master/com.clintonstrong.SearchTabs/search_safari_and_chrome_tabs.alfredworkflow)
+
+Search tabs in Safari and Chrome (also supports WebKit, Chromium, and Chrome Canary) ~ *by [@clintxs](https://github.com/clintxs).*
+
+> Triggers: `tabs`.
+
+![Safari Chrome Tabs Workflow](http://cl.ly/image/0T3W2a0x1H1s/Screen%20Shot%202013-01-19%20at%2012.42.30%20PM.png)
+
+### [Slack](http://www.alfredforum.com/topic/5093-slackfred-interact-with-the-chat-service-slack/) ~ [Download](https://github.com/fspinillo/slackfred/archive/master.zip)
+
+Interact, and perform various functions with the service [Slack](https://slack.com/) ~ *by [@fspinillo](https://github.com/fspinillo).*
+
+P.S.: You have to [generate an API token](https://api.slack.com/#auth) before you can use the workflow: `slt`, then paste in `<token>` .
+
+> Triggers: `slc`, `slf`, `slk`, `slp`.
+
+![Slackfred Workflow](http://i.imgur.com/Vy78c78.gif)
+
 ### [StackOverflow](https://github.com/xhinking/Alfred) (1.0) ~ [Download](http://zno.io/RceO)
 
 Search for a question on [StackOverflow](http://stackoverflow.com) ~ *by [@xhinking](https://github.com/xhinking/).*
@@ -166,6 +186,15 @@ Search for a question on [StackOverflow](http://stackoverflow.com) ~ *by [@xhink
 > Triggers: `st`.
 
 ![StackOverflow Workflow](https://cloud.githubusercontent.com/assets/398893/3528942/44456e0e-0794-11e4-9473-9c9796d2dbec.png)
+
+### [Terminal → Finder](https://github.com/LeEnno/alfred-terminalfinder) (v1.6) ~ [Download](http://zno.io/RkU2)
+
+Open current Finder window in Terminal/iTerm and vice versa ~ *by [@LeEnno](https://github.com/LeEnno/).*
+
+> Triggers: `ft`, `tf`, `fi`, `if`.
+
+![Terminal → Finder](https://cloud.githubusercontent.com/assets/398893/3528744/7f119730-0792-11e4-9450-c30a1ac229be.png)
+![Terminal → Finder](https://cloud.githubusercontent.com/assets/398893/3528751/912d8be0-0792-11e4-86f8-aa1e62ddece7.png)
 
 ### [TimeZones](http://www.alfredforum.com/topic/491-timezones-a-world-clock-script-filter-updated-to-v17/) (1.7) ~ [Download](http://zno.io/Rce5)
 
@@ -189,19 +218,3 @@ P.S.: VirtualBox is a free external application, make sure to [download](https:/
 ## Extras
 
 Do you want more? [Go get it!](https://github.com/zenorocha/alfred-workflows/wiki/Extras)
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## History
-
-See [Releases](https://github.com/zenorocha/alfred-workflows/releases) for detailed changelog.
-
-## License
-
-[MIT License](http://zenorocha.mit-license.org/) © Zeno Rocha
