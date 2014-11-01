@@ -109,7 +109,7 @@ pull_down_changes() {
 }
 
 install_workflows() {
-	local dirs="$DIR/*"
+	local dirs="$DIR/workflows/*"
 	local dir
 
 	for dir in $dirs
