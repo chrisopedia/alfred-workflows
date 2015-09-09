@@ -115,9 +115,8 @@ install_workflows() {
 	for dir in $dirs
 	do
 		file="$(basename "$dir")"
-		_is_dir "${dir}" \
-			&& _process "Installing ${file}.alfredworkflow" \
-			&& open "${dir}/${file}.alfredworkflow" \
+		_process "Installing ${file}" \
+			&& open "${dir}" \
 			&& pause "Press [Enter] key to continue..."
 	done
 
