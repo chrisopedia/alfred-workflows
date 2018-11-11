@@ -120,6 +120,8 @@ install_workflows() {
 			&& pause "Press [Enter] key to continue..."
 	done
 
+	npm install --global --quiet @alexlafroscia/tldr-alfred-workflow alfred-css-triggers alfred-fkill alfred-npms
+
 	[[ $? ]] && _success "All workflows installed"
 }
 
