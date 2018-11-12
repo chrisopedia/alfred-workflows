@@ -12,7 +12,7 @@ _is_dir() {
 }
 _is_app_installed() {
 	local app=$1
-	if find "/Applications" "$HOME/Applications" -name "*$app*" &> /dev/null; then
+	if find "/Applications" -name "*$app*" &> /dev/null; then
 		return 0
 	fi
 	return 1
@@ -133,7 +133,7 @@ main() {
 		&& setup_git_repo \
 		&& pull_down_changes
 
-	_is_app_installed "Alfred 2" \
+	_is_app_installed "Alfred 3" \
 		&& install_workflows
 
 	[[ $? ]] && _success "$REPO installed"
